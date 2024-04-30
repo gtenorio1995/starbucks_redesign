@@ -1,3 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
 
+.container-geral {
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container-geral {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-geral .container {
+  width: 100%;
+  max-width: 1152px;
+  height: 700px;
+  background-color: #D4EAE2;
+  border-radius: 1.875em;
+  padding: 2.8125em 4.375em;
+}
+.container-geral .container #img-1 {
+  top: 24px;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+}
+.container-geral .container #img-2 {
+  top: 560px;
+  left: -200px;
+  filter: blur(16px);
+  -webkit-filter: blur(16px);
+  z-index: 0;
+  position: absolute;
+}
+.container-geral .container header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-geral .container header .brand img {
+  width: 3em;
+}
+.container-geral .container header nav ul {
+  display: flex;
+  column-gap: 4.375em;
+  align-items: center;
+}
+.container-geral .container header nav ul li a {
+  color: #000;
+}
+.container-geral .container header nav ul li a:hover {
+  color: #00623B;
+  border-bottom: 1px solid #00623B;
+}
+.container-geral .container header button {
+  background-color: #00623B;
+  color: #fff;
+  border-radius: 0.375em;
+  padding: 0.625em 1.875em;
+  border: none;
+}
+.container-geral .container header button:hover {
+  filter: brightness(0.9);
+  -webkit-filter: brightness(0.9);
+}
+.container-geral .container main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container-geral .container main .span-text-1 {
+  margin-top: 0.25em;
+  font-size: 5.625em;
+  color: #00623B;
+  line-height: 1;
+  font-weight: 700;
+}
+.container-geral .container main .span-text-2 {
+  font-size: 5.625em;
+  color: #fff;
+  line-height: 1;
+  font-weight: 700;
+}
+.container-geral .container main img {
+  position: absolute;
+  top: 220px;
+}
 
 /*# sourceMappingURL=main.css.map */

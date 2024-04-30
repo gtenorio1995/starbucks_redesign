@@ -1,0 +1,117 @@
+// IMPORTS
+@use "./config/reset";
+@use "./variables/colors";
+@use "./variables/fonts";
+@use "sass:math";
+
+// FUNCTIONS
+@function converter($px) {
+    @return math.div($px, 16) * 1em;
+}
+
+.container-geral{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    // START CONTAINER
+    .container{
+        width: 100%;
+        max-width: 1152px;
+        height: 700px;
+        background-color: colors.$color-solid-bg;
+        border-radius: converter(30);
+        padding: converter(45) converter(70);
+
+        #img-1{
+            top: 24px;
+            right: 0;
+            z-index: -1;
+            position: absolute;
+        }
+
+        #img-2{
+            top: 560px;
+            left: -200px;
+            filter: blur(16px);
+            -webkit-filter: blur(16px);
+            z-index: 0;
+            position: absolute;
+        }
+
+        // START HEADER
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .brand img{
+                width: converter(48);
+            }
+    
+            nav{
+                ul{
+                    display: flex;
+                    column-gap: converter(70);
+                    align-items: center;
+    
+                    li{
+                        a{
+                            color: colors.$color-solid-black;
+
+                            &:hover{
+                                color: colors.$color-solid-btn;
+                                border-bottom: 1px solid colors.$color-solid-btn;
+                            }
+                        }
+                    }
+                }
+            }
+
+            button{
+                background-color: colors.$color-solid-btn;
+                color: colors.$color-solid-white;
+                border-radius: converter(6);
+                padding: converter(10) converter(30);
+                border: none;
+
+                &:hover{
+                    filter: brightness(0.9);
+                    -webkit-filter: brightness(0.9);
+                }
+            }
+        }
+        // END HEADER
+
+        // START MAIN
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .span-text-1{
+                margin-top: converter(4);
+                font-size: converter(fonts.$font-size-90);
+                color: colors.$color-solid-btn; 
+                line-height: 1;
+                font-weight: fonts.$font-weight-bold;
+            }
+            .span-text-2{
+                font-size: converter(fonts.$font-size-90);
+                color: colors.$color-solid-white;
+                line-height: 1;
+                font-weight: fonts.$font-weight-bold;
+            }
+
+            img{
+                position: absolute;
+                top: 220px;
+            }
+        }
+        // END MAIN
+    }
+    // END CONTAINER
+}
